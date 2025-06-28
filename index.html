@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Say It Loud</title>
+</head>
+<body>
+  <h1>Say It Loud 🎤</h1>
+  <textarea id="text" placeholder="Type something to say..."></textarea>
+  <button onclick="speak()">Speak</button>
+  <script>
+    function speak() {
+      const text = document.getElementById('text').value;
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
